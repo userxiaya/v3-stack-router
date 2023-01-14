@@ -1,4 +1,4 @@
-# vcat-history
+# v3-stack-router
 效果演示：前进后退动画、前进刷新后退缓存
 
 ## 特性
@@ -18,14 +18,6 @@ npm i v3-stack-router
 ## 问题描述
 目前vue3 keep-alive组件只能通过name属性值动态缓存组件 那么使用同一个组件的两个页面页面就无法动态缓存 如：（about/1 和 about/2 同使用about组件 页面参数不一样）
 
-```html
-<keep-alive>
-  <router-view>
-    <!-- 被缓存的视图 -->
-  </router-view>
-</keep-alive>
-```
-
 #### 解决
 在keep-alive里再包一个组件使用插槽传入vue-router的fullPath参数然后在插槽组件里判断是否需要缓存
 
@@ -44,7 +36,7 @@ export default router
 ```
 
 ```html
-<!-- App.vue -->
+<!-- about.vue -->
 <template>
   <stackView v-slot="{ Component }" backName="slide-right" forwardName="slide-left">
     <lazyLoader v-slot="{ reload }">
