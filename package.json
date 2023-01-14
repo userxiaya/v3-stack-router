@@ -1,7 +1,7 @@
 {
   "name": "v3-stack-router",
   "version": "1.0.0",
-  "description": "vue3 前进刷新后退",
+  "description": "vue3 前进刷新后退缓存",
   "main": "lib/main.umd.js",
   "module": "lib/main.esm.js",
   "typings": "lib/types/index.d.ts",
