@@ -1,6 +1,6 @@
 {
   "name": "v3-stack-router",
-  "version": "1.0.1",
+  "version": "1.0.22",
   "description": "vue3 前进刷新后退",
   "main": "lib/main.umd.js",
   "module": "lib/main.esm.js",
@@ -25,7 +25,7 @@
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
-  "repository": "https://github.com/iwowen/tutils",
+  "repository": "https://github.com/userxiaya/v3-stack-router",
   "dependencies": {
     "rollup-plugin-typescript2": "^0.34.1"
   }
