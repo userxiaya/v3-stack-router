@@ -12,6 +12,14 @@ const props = defineProps<{
 }>()
 // 判断是否渲染
 const show = computed(() => {
-  return state.historyPages.indexOf(props.path) > -1
+  const list = state.historyPages
+  return list.indexOf(props.path) > -1
 })
 </script>
+<style>
+.stack-router-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+</style>

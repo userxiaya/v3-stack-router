@@ -1,3 +1,4 @@
+import { nextTick } from 'vue'
 import type { Router, RouteRecordRaw } from 'vue-router'
 import type { ActionName } from './state'
 import state, { cacheKey } from './state'
@@ -96,6 +97,7 @@ class Stack {
 
     router.afterEach((to) => {
       addHistory(to.fullPath)
+      nextTick(() => { state.init = true })
     })
   }
 }

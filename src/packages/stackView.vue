@@ -22,7 +22,7 @@ const props = defineProps<{
 }>()
 // 过渡动画
 const transitionName = computed(() => {
-  if (state.transitionName) {
+  if (state.transitionName && state.init) {
     return state.transitionName === 'forward' ? props.forwardName : props.backName
   }
   return ''

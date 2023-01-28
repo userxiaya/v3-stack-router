@@ -36,11 +36,11 @@ export default router
 ```
 
 ```html
-<!-- about.vue -->
+<!-- App.vue -->
 <template>
   <stackView v-slot="{ Component }" backName="slide-right" forwardName="slide-left">
-    <lazyLoader v-slot="{ reload }">
-      <component :is="Component" :reload="reload"/>
+    <lazyLoader>
+      <component :is="Component"/>
     </lazyLoader>
   </stackView>
 </template>
@@ -83,7 +83,7 @@ import { lazyLoader, stackView } from 'v3-stack-router'
 ```
 
 ```html
-<!-- App.vue -->
+<!-- about.vue -->
 <template>
   <div class="about">
     <h1>This is an about page</h1>
@@ -95,12 +95,12 @@ import { lazyLoader, stackView } from 'v3-stack-router'
 
 </style>
 <script lang="ts" setup>
+  
 import { onMounted } from 'vue';
+import { useCurrentPage } from 'v3-stack-router'
 const sleep = (time: number) => new Promise(resolve => setTimeout(resolve, time))
 await sleep(1000)
-defineProps<{
-  reload: ()=>void
-}>()
+const { reload } = useCurrentPage
 onMounted(() => {  
   console.log('about');
 })
