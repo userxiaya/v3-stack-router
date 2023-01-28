@@ -20,15 +20,15 @@ const show = ref(true)
 const isError = ref(false)
 const message = ref('')
 onErrorCaptured((error) => {
-    message.value = error.message
-    isError.value = true
-    return false
+  message.value = error.message
+  isError.value = true
+  return false
 })
 const reload = () => {
-    isError.value = false
-    show.value = false
-    nextTick(() => {
-        show.value = true
-    })
+  isError.value = false
+  show.value = false
+  nextTick(() => {
+    show.value = true
+  })
 }
 </script>

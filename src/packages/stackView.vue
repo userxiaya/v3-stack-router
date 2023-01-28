@@ -13,8 +13,8 @@
 </template>
 <script lang="ts" setup>
 import state from './state'
-import { computed } from 'vue';
-import RenderView from './renderView.vue';
+import { computed } from 'vue'
+import RenderView from './renderView.vue'
 
 const props = defineProps<{
     backName?: string;
@@ -22,9 +22,9 @@ const props = defineProps<{
 }>()
 // 过渡动画
 const transitionName = computed(() => {
-    if (state.transitionName) {
-        return state.transitionName === 'forward' ? props.forwardName : props.backName
-    }
-    return ''
+  if (state.transitionName) {
+    return state.transitionName === 'forward' ? props.forwardName : props.backName
+  }
+  return ''
 })
 </script>
