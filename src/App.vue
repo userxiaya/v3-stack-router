@@ -8,8 +8,8 @@ import { lazyLoader, stackView } from 'packages/index'
       <template v-slot:loading>
         加载插槽位
       </template>
-      <template v-slot:error>
-        错误插槽位
+      <template v-slot:error="{ error }">
+        错误插槽位{{ error?.message }}
       </template>
       <template v-slot:default>
         <component :is="Component"/>
