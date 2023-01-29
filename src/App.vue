@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { lazyLoader, stackView } from '@/packages/index'
+import { lazyLoader, stackView } from 'packages/index'
 </script>
 
 <template>

@@ -10,7 +10,7 @@
 
 </style>
 <script lang="ts" setup>
-import { useCurrentPage } from '@/packages'
+import { useCurrentPage } from 'packages'
 import { onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 const sleep = (time: number) => new Promise(resolve => setTimeout(resolve, time))

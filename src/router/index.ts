@@ -1,5 +1,5 @@
 import { createWebHashHistory } from 'vue-router'
-import { initRouter } from '@/packages/index'
+import { initRouter } from 'packages'
 
 const router = initRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),

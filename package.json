@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -12,17 +12,15 @@
     "vue-router": "^4.1.6"
   },
   "files": [
-    "es",
-    "lib"
+    "dist"
   ],
-  "main": "lib/index.js",
-  "module":"es/index.js",
-  "types": "lib/types/index.d.ts",
+  "main": "dist/stack.es.js",
+  "module":"dist/stack.es.js",
+  "types": "dist/packages/index.d.ts",
   "exports": {
-    "./lib/style.css": "./lib/style.css",
     ".": {
-      "import": "./lib/v3-stack-router.mjs",
-      "require": "./lib/v3-stack-router.umd.js"
+      "import": "./dist/stack.es.js",
+      "require": "./dist/stack.umd.js"
     }
   },
   "devDependencies": {
