@@ -1,6 +1,6 @@
 {
   "name": "v3-stack-router",
-  "version": "1.2.2",
+  "version": "1.2.21",
   "private": false,
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,9 @@
     "vue-router": "^4.1.6"
   },
   "files": [
-    "dist"
+    "dist",
+    "package.json",
+    "README.me"
   ],
   "main": "dist/stack.es.js",
   "module":"dist/stack.es.js",
@@ -23,6 +25,7 @@
       "require": "./dist/stack.umd.js"
     }
   },
+  "repository": "https://github.com/userxiaya/v3-stack-router",
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/node": "^18.11.12",
