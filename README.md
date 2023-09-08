@@ -8,6 +8,7 @@
 - 前进刷新后退缓存
 - setup组件异步加载loading
 - 刷新当前页面
+- 支持子路由嵌套
 
 ## 插件安装
 ```bash
@@ -109,4 +110,4 @@ onMounted(() => {
 
 如有问题请留言，感谢支持！
 
-### [Demo地址](https://github.com/userxiaya/v3-stack-demo)
+### [Demo地址](https://github.com/userxiaya/v3-stack-router)
