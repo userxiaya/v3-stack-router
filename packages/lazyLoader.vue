@@ -15,9 +15,7 @@
 </template>
 <script lang="ts" setup>
 import { nextTick, onErrorCaptured, provide, ref } from 'vue'
-import { useRoute } from 'vue-router'
 
-const route = useRoute()
 const show = ref(true)
 const isError = ref(false)
 /** 错误信息 */
@@ -34,5 +32,5 @@ const reload = () => {
     show.value = true
   })
 }
-provide(`${route.fullPath}-reload`, reload)
+provide('stack-reload', reload)
 </script>
