@@ -42,13 +42,18 @@ onMounted(() => {
 .about {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 
-  .container {
-    width: 100%;
-    flex-grow: 1;
-    background-color: aqua;
-  }
+}
+
+.container {
+  width: 100%;
+  flex-grow: 1;
+  background-color: aqua;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
 }
 </style>
