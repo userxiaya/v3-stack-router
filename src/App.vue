@@ -18,14 +18,14 @@ import { lazyLoader, stackView } from 'packages/index'
   </stackView>
 </template>
 
-<style>
+<style scoped>
 .slide-right-enter-active,
 .slide-right-leave-active,
 .slide-left-enter-active,
 .slide-left-leave-active {
   will-change: transform;
   transition: transform 300ms;
-  position: absolute;
+  position: fixed;
   pointer-events: none;
 }
 

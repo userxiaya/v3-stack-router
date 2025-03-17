@@ -16,7 +16,5 @@ const next = () => {
 </script>
 
 <template>
-  <div @click="next" style="width: 100%; height: 100%;">
-    home
-  </div>
+  <div @click="next" style="width: 100%; height: 100%;">home</div>
 </template>

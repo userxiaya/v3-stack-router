@@ -12,23 +12,7 @@ const router = initRouter({
     {
       path: '/about/:id',
       name: 'about',
-      component: () => import('../views/AboutView.vue'),
-      redirect: { name: 'detail' },
-      meta: {
-        hasChildren: true // 是否
-      },
-      children: [
-        {
-          path: 'detail',
-          name: 'detail',
-          component: () => import('../views/home/detail.vue')
-        },
-        {
-          path: 'des',
-          name: 'des',
-          component: () => import('../views/home/des.vue')
-        }
-      ]
+      component: () => import('../views/AboutView.vue')
     }
   ]
 })
