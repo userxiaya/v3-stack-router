@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { lazyLoader, stackView } from 'packages/index'
+import { onMounted } from 'vue'
+onMounted(() => {
+  console.log('parent-mounted')
+})
 </script>
 
 <template>
