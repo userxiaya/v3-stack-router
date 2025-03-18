@@ -13,6 +13,27 @@ const router = initRouter({
       path: '/about/:id',
       name: 'about',
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/parent/:id',
+      name: 'parent',
+      component: () => import('../views/parent/index.vue'),
+      redirect: to => {
+        // 子路由重定向
+        return (to.path.endsWith('/') ? to.path : `${to.path}/`).replace(/$/, 'child1')
+      },
+      children: [
+        {
+          path: 'child1',
+          name: 'child1',
+          component: () => import('../views/parent/child1.vue')
+        },
+        {
+          path: 'child2',
+          name: 'child2',
+          component: () => import('../views/parent/child2.vue')
+        }
+      ]
     }
   ]
 })

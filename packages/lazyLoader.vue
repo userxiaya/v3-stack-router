@@ -27,6 +27,9 @@ onErrorCaptured((err: Error) => {
   isError.value = true
   return false
 })
+/**
+ * 重新加载
+*/
 const reload = () => {
   isError.value = false
   show.value = false
