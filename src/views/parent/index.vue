@@ -5,7 +5,7 @@ import { lazyLoader, stackView } from 'packages/index'
 <template>
     <div>
         parent
-        <stackView v-slot="{ Component }" backName="slide-right" forwardName="slide-left" :matched-path="'/parent/:id'">
+        <stackView v-slot="{ Component }" backName="slide-right" forwardName="slide-left">
             <lazyLoader>
                 <template v-slot:loading>
                     加载插槽位
