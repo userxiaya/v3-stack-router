@@ -6,9 +6,9 @@
 - 支持TypeScript
 - 前进后退动画
 - 前进刷新后退缓存
-- setup组件异步加载loading
+- setup组件异步加载loading（可自定义加载中页面和加载失败页面）
 - 刷新当前页面
-- 兼容路由嵌套 v2.0.4
+- 兼容路由嵌套 (v2.0.4 版本兼容)
 
 ## 插件安装
 ```bash
@@ -35,6 +35,7 @@ const router = initRouter({
 
 export default router
 ```
+
 
 ```html
 <!-- App.vue -->
@@ -107,6 +108,45 @@ onMounted(() => {
 })
 </script>
 ```
+
+
+
+## 路由嵌套子路由配置demo
+
+```js
+// 在 router.js 中引用
+import { initRouter } from 'v3-stack-router'
+
+const router = initRouter({
+  history: createWebHashHistory(), // 建议使用hash路由模式
+  routes: [
+     {
+      path: '/parent/:id',
+      name: 'parent',
+      component: () => import('../views/parent/index.vue'),
+      redirect: to => {
+        // 子路由重定向
+        return (to.path.endsWith('/') ? to.path : `${to.path}/`).replace(/$/, 'child1')
+      },
+      children: [
+        {
+          path: 'child1',
+          name: 'child1',
+          component: () => import('../views/parent/child1.vue')
+        },
+        {
+          path: 'child2',
+          name: 'child2',
+          component: () => import('../views/parent/child2.vue')
+        }
+      ]
+    }
+  ]
+})
+
+export default router
+```
+## html同上App.vue
 
 如有问题请留言，感谢支持！
 

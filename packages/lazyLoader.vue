@@ -14,10 +14,9 @@
   </Suspense>
 </template>
 <script lang="ts" setup>
-import { nextTick, onErrorCaptured, provide, ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { nextTick, onErrorCaptured, ref } from 'vue'
+import { provideReloadPage } from '.'
 
-const route = useRoute()
 const show = ref(true)
 const isError = ref(false)
 /** 错误信息 */
@@ -37,5 +36,5 @@ const reload = () => {
     show.value = true
   })
 }
-provide(`${route.fullPath}-reload`, reload)
+provideReloadPage(reload)
 </script>

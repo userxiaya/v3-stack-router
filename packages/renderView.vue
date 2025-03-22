@@ -13,7 +13,7 @@ const props = defineProps<{
 // 判断是否渲染
 const show = computed(() => {
   const list = state.historyPages
-  return list.indexOf(props.path) > -1
+  return list.includes(props.path)
 })
 </script>
 <style>
